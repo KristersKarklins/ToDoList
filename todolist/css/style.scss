@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 5vh;
+    gap: 20px;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    a {
+        padding: 5px;
+
+        color: black;
+        text-decoration: none;
+        border: 1px solid black;
+        background-color: white;
+        &:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+    }
+}
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1002%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1003)'%3e%3c/rect%3e%3cpath d='M1440 0L1046.58 0L1440 32.67z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1046.58 0L1440 32.67L1440 313.04L519.8 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M519.8 0L1440 313.04L1440 427.84000000000003L214.67999999999995 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M214.67999999999984 0L1440 427.84000000000003L1440 466.40000000000003L178.63999999999984 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 560L484 560L0 395.1z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 395.1L484 560L553.71 560L0 188.00000000000003z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 188L553.71 560L574.4100000000001 560L0 178.69z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 178.69L574.4100000000001 560L1042.17 560L0 98.86z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1002'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1003'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='%2300459e' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
+    .task_container {
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+        height: 80%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .task {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            position: relative;
+
+            width: 300px;
+            height: 300px;
+            padding: 5px;
+
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            #title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 100%;
+                height: 20%;
+            }
+            #description {
+                height: 40%;
+                word-break: break-all;
+            }
+            #stage {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                width: 100%;
+                height: 10%;
+            }
+            #dates {
+                display: flex;
+                justify-content: space-between;
+
+                height: 15%;
+                width: 100%;
+                div {
+                    display: flex;
+                    align-items: center;
+
+                    color: gray;
+                }
+            }
+            #buttons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 100%;
+                height: 15%;
+                gap: 20px;
+                button {
+                    width: 200px;
+                    height: 30px;
+
+                    border: 1px solid black;
+                }
+                .edit-button {
+                    background-color: rgb(79, 211, 255);
+                    &:hover {
+                        background-color: rgb(69, 185, 223);
+                        cursor: pointer;
+                    }
+                }
+                .check-button {
+                    background-color: limegreen;
+                    &:hover {
+                        background-color: rgb(41, 168, 41);
+                        cursor: pointer;
+                    }
+                }
+            }
+            .delete-button {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+
+                position: absolute;
+
+                right: 10px;
+                top: 5px;
+                padding: 10px;
+                border-radius: 50%;
+                font-size: 16px;
+
+                border: none;
+                transform: translate(50%, -50%);
+                background-color: red;
+
+                &:hover {
+                    background-color: rgb(216, 0, 0);
+                    cursor: pointer;
+                }
+            }
+        }
+        .Complete {
+            display: none;
+        }
+        .expired{
+            display: none;
+        }
+    }
+}
